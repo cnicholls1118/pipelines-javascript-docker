@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: cnichollspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cnichollspipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: cnichollspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: cnichollspipelinesjavascriptdocker 
+          image: assign2.azurecr.io/cnichollspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
